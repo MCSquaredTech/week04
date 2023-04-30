@@ -84,15 +84,13 @@ console.log(calculateLastFirst(ages)); // output is: 62
 // Requirement: Code Assignment 1c: 
 // Use a loop to iterate through the array and calculate the average age.
 
-// The Plan: Create two variables to hold the current array length and the 
-// sum product of all ages. To calculate the true array length we will assign 
-// array.length - 1 to the length variable. To comply with the requirements 
-// a loop will sum all the ages to the second variable sum. The plan will be to 
-// use a for loop to sum the ages. We will return the results sum / length
+// The Plan: Create one variables to hold the sum product of all ages. 
+//  To comply with the requirements a loop will sum all the ages to the second variable sum. 
+// The plan will be to use a for loop to sum the ages. We will return the results sum / length
 
 let calculateAverageAge = (a) => { 
     // Calculate the index length
-    let length = a.length; 
+    // let length = a.length; // refactored
     // Initialize sum = 0
     let sum = 0;
 
@@ -103,7 +101,7 @@ let calculateAverageAge = (a) => {
 
     // Calculate Average Age and return value with fixed two decimals
     // fixed two decimals were not in the requirements. Could be dangerous!!! 
-    return (sum / length).toFixed(2);
+    return (sum / a.length).toFixed(2);
 }
 
 // Show work in console.
